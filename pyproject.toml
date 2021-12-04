@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "termcolor-whl"
-version = "1.1.0"
+version = "1.1.1"
 description = "ANSI Color formatting for output in terminal, successor to termcolor (has wheels!)"
 authors = [
     "Konstantin Lepa <konstantin.lepa@gmail.com>",
@@ -23,6 +23,9 @@ classifiers = [
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
 ]
+packages = [
+    { include = "termcolor" },
+]
 include = [
     "termcolor/**/*.py",
 ]
@@ -36,7 +39,7 @@ documentation = "https://github.com/matthewdeanmartin/termcolor"
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/matthewdeanmartin/termcolor/issues"
-"Change Log" = "https://github.com/matthewdeanmartin/termcolor/blob/main/CHANGES.md"
+"Change Log" = "https://github.com/matthewdeanmartin/termcolor/blob/main/docs/CHANGES.MD"
 
 [tool.poetry.scripts]
 

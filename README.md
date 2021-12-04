@@ -76,4 +76,4 @@ Original license: MIT.
 Original source code repository no longer available, this is a fork of the artifacts published to pypi
 
 ## Documents
-- [Changes](docs/CHANGES.MD)
+- [Changes](https://github.com/matthewdeanmartin/termcolor/blob/main/docs/CHANGES.MD)
