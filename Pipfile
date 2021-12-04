@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pytest-cov = "*"
+
+[dev-packages]
+pytest = "*"
+flake8 = "*"
+pylint = "*"
+pytest-cov = ">=2.10.1"
+
+[requires]
+python_version = "3.9"
