@@ -8,51 +8,15 @@ __ALL__ = ["colored", "cprint"]
 
 # See package/pyproject.toml for version number
 
-ATTRIBUTES = dict(
-    list(
-        zip(
-            ["bold", "dark", "", "underline", "blink", "", "reverse", "concealed"],
-            list(range(1, 9)),
-        )
-    )
-)
+ATTRIBUTE_NAMES = ["bold", "dark", "", "underline", "blink", "", "reverse", "concealed"]
+ATTRIBUTES = dict(zip(ATTRIBUTE_NAMES, range(1, 9)))
 del ATTRIBUTES[""]
 
-HIGHLIGHTS = dict(
-    list(
-        zip(
-            [
-                "on_grey",
-                "on_red",
-                "on_green",
-                "on_yellow",
-                "on_blue",
-                "on_magenta",
-                "on_cyan",
-                "on_white",
-            ],
-            list(range(40, 48)),
-        )
-    )
-)
+HIGHLIGHT_NAMES = ["on_grey", "on_red", "on_green", "on_yellow", "on_blue", "on_magenta", "on_cyan", "on_white"]
+HIGHLIGHTS = dict(zip(HIGHLIGHT_NAMES, range(40, 48)))
 
-COLORS = dict(
-    list(
-        zip(
-            [
-                "grey",
-                "red",
-                "green",
-                "yellow",
-                "blue",
-                "magenta",
-                "cyan",
-                "white",
-            ],
-            list(range(30, 38)),
-        )
-    )
-)
+COLOR_NAMES = ["grey", "red", "green", "yellow", "blue", "magenta", "cyan", "white"]
+COLORS = dict(zip(COLOR_NAMES, range(30, 38)))
 
 RESET = "\033[0m"
 
@@ -76,18 +40,15 @@ def colored(text, color=None, on_color=None, attrs=None):
     >>> colored('Hello, World!', 'green')
     '\\x1b[32mHello, World!\\x1b[0m'
     """
-    if os.getenv("ANSI_COLORS_DISABLED") is None:
-        fmt_str = "\033[%dm%s"
-        if color is not None:
+    if not os.getenv("ANSI_COLORS_DISABLED") and (color or on_color or attrs):
+        fmt_str = '\033[%dm%s'
+        if color:
             text = fmt_str % (COLORS[color], text)
-
-        if on_color is not None:
+        if on_color:
             text = fmt_str % (HIGHLIGHTS[on_color], text)
-
-        if attrs is not None:
+        if attrs:
             for attr in attrs:
                 text = fmt_str % (ATTRIBUTES[attr], text)
-
         text += RESET
     return text
 

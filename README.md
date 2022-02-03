@@ -1,30 +1,37 @@
-# termcolor
+# termcolor-whl
+
 Colorize your console output.
 
-This is the successor to `termcolor`
+This is the successor to [`termcolor`](https://pypi.org/project/termcolor/).
  
-### Example
+Note that handling of nested colour tokens has been removed in this package. This is to save on an import of a large package (`re`) and since this is actually not a common usage case.
 
-     import sys
-     from termcolor import colored, cprint
+## Example
 
-     text = colored('Hello, World!', 'red', attrs=['reverse', 'blink'])
-     print(text)
-     cprint('Hello, World!', 'green', 'on_red')
+```python
+import sys
+from termcolor import colored, cprint
 
-     print_red_on_cyan = lambda x: cprint(x, 'red', 'on_cyan')
-     print_red_on_cyan('Hello, World!')
-     print_red_on_cyan('Hello, Universe!')
+text = colored('Hello, World!', 'red', attrs=['reverse', 'blink'])
+print(text)
+cprint('Hello, World!', 'green', 'on_red')
 
-     for i in range(10):
-         cprint(i, 'magenta', end=' ')
+print_red_on_cyan = lambda x: cprint(x, 'red', 'on_cyan')
+print_red_on_cyan('Hello, World!')
+print_red_on_cyan('Hello, Universe!')
 
-     cprint("Attention!", 'red', attrs=['bold'], file=sys.stderr)
+for i in range(10):
+    cprint(i, 'magenta', end=' ')
 
-### Disabling
+cprint("Attention!", 'red', attrs=['bold'], file=sys.stderr)
+```
+
+
+## Disabling
 Any value in the environment variable `ANSI_COLORS_DISABLED` will disable colors.
 
-### Text Properties
+
+## Text Properties
 Text colors:
 
 > -   grey
@@ -46,7 +53,7 @@ Text highlights:
 > -   on\_cyan
 > -   on\_white
 
-> Attributes:
+Attributes:
 > -   bold
 > -   dark
 > -   underline
@@ -54,7 +61,8 @@ Text highlights:
 > -   reverse
 > -   concealed
 
-### Terminal properties
+
+## Terminal properties
 
     Terminal       bold      dark   underline   blink        reverse   concealed
     -------------- --------- ------ ----------- ------------ --------- -----------
@@ -69,11 +77,13 @@ Text highlights:
     Cygwin SSH     yes       no     color       color        color     yes
     Mac Terminal   yes       no     yes         yes          yes       yes
 
-### License and Authorship
+
+## License and Authorship
 Original author: Konstantin Lepa <konstantin.lepa@gmail.com>, Copyright (c) 2008-2011 Volvox Development Team
 Original license: MIT.
 
 Original source code repository no longer available, this is a fork of the artifacts published to pypi
+
 
 ## Documents
 - [Changes](https://github.com/matthewdeanmartin/termcolor/blob/main/docs/CHANGES.MD)
