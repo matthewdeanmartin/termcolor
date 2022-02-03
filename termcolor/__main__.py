@@ -1,6 +1,7 @@
 import os
 
-from termcolor import cprint
+from . import cprint
+
 
 def demo():
     print("Current terminal type: %s" % os.getenv("TERM"))
