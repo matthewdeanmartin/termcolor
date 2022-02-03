@@ -4,7 +4,8 @@ Colorize your console output.
 
 This is the successor to [`termcolor`](https://pypi.org/project/termcolor/).
  
-Note that handling of nested colour tokens has been removed in this package. This is to save on an import of a large package (`re`) and
+Note that handling of nested colour tokens has been removed in this package. This is to save on an import of a large package (`re`) and since this is actually not a common usage case.
+
 ## Example
 
 ```python
