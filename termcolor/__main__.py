@@ -1,8 +1,12 @@
+"""Demo code"""
 import os
 
 from termcolor import cprint
 
+
 def demo():
+    """Show possible usages"""
+    # pylint: disable=consider-using-f-string
     print("Current terminal type: %s" % os.getenv("TERM"))
     print("Test basic colors:")
     cprint("Grey color", "grey")
@@ -50,5 +54,5 @@ def demo():
     cprint("Reversed green on red color", "green", "on_red", ["reverse"])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     demo()

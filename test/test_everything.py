@@ -4,24 +4,27 @@ from termcolor.__main__ import demo
 
 
 def test_exercise_code():
-
-    text = colored('Hello, World!', 'red', attrs=['reverse', 'blink'])
+    text = colored("Hello, World!", "red", attrs=["reverse", "blink"])
     print(text)
-    cprint('Hello, World!', 'green', 'on_red')
+    cprint("Hello, World!", "green", "on_red")
 
-    print_red_on_cyan = lambda x: cprint(x, 'red', 'on_cyan')
-    print_red_on_cyan('Hello, World!')
-    print_red_on_cyan('Hello, Universe!')
+    def print_red_on_cyan(x):
+        cprint(x, "red", "on_cyan")
+
+    print_red_on_cyan("Hello, World!")
+    print_red_on_cyan("Hello, Universe!")
 
     for i in range(10):
-        cprint(i, 'magenta', end=' ')
+        cprint(i, "magenta", end=" ")
 
-    cprint("Attention!", 'red', attrs=['bold'], file=sys.stderr)
+    cprint("Attention!", "red", attrs=["bold"], file=sys.stderr)
+
 
 def test_examples():
-    colored('Hello, World!', 'red', 'on_grey', ['bold', 'blink'])
+    colored("Hello, World!", "red", "on_grey", ["bold", "blink"])
 
-    colored('Hello, World!', 'green')
+    colored("Hello, World!", "green")
+
 
 def test_main():
     demo()

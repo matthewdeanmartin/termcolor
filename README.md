@@ -1,10 +1,11 @@
-# termcolor
+# termcolor-whl
 Colorize your console output.
 
-This is the successor to `termcolor`
+This is a fork of `termcolor`, originally created so it would have a wheel package.
  
 ### Example
 
+```python
      import sys
      from termcolor import colored, cprint
 
@@ -20,6 +21,7 @@ This is the successor to `termcolor`
          cprint(i, 'magenta', end=' ')
 
      cprint("Attention!", 'red', attrs=['bold'], file=sys.stderr)
+```
 
 ### Disabling
 Any value in the environment variable `ANSI_COLORS_DISABLED` will disable colors.

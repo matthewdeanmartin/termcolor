@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "termcolor-whl"
-version = "1.1.2"
-description = "ANSI Color formatting for output in terminal, successor to termcolor (has wheels!)"
+version = "1.1.3"
+description = "ANSI Color formatting for output in terminal, fork of termcolor, maintained as of 2023 by Matthew Martin"
 authors = [
     "Konstantin Lepa <konstantin.lepa@gmail.com>",
     "Matthew Martin <matthewdeanmartin@gmail.com>"
@@ -22,6 +22,7 @@ classifiers = [
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
 ]
 packages = [
     { include = "termcolor" },
@@ -49,7 +50,12 @@ documentation = "https://github.com/matthewdeanmartin/termcolor"
 python = ">=2.6 || >=3.0"
 
 [tool.poetry.dev-dependencies]
+tox = "*"
+flake8 = "*"
+pylint = "*"
+pytest-cov = ">=2.10.1"
 pytest = "==6.0.1"
+
 
 [build-system]
 requires = ["poetry>=0.12"]
