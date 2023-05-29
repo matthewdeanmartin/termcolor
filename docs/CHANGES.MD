@@ -2,6 +2,9 @@
 ------------------
 - Adding trusted publisher
 - Adding make file
+- Reformatted insides a little bit
+- Fixed a bug where spurious 'RESET' tag is added when all `color`, `on_color` and `attrs` are none.
+
 
 1.1.1 (4.12.2021)
 ------------------

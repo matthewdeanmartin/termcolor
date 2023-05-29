@@ -1,7 +1,8 @@
 """Demo code"""
 import os
 
-from termcolor import cprint
+from . import cprint
+
 
 
 def demo():
@@ -54,5 +55,5 @@ def demo():
     cprint("Reversed green on red color", "green", "on_red", ["reverse"])
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     demo()

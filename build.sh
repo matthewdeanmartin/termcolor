@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 echo assuming we still want to support python 2!
 export PYTHONPATH=$PYTHONPATH:.
 pylint termcolor

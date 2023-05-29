@@ -2,31 +2,37 @@
 Colorize your console output.
 
 This is a fork of `termcolor`, originally created so it would have a wheel package.
+
  
-### Example
+Note that handling of nested colour tokens has been removed in this package. This is to save on an import of a large package (`re`) and since this is actually not a common usage case.
+
+## Example
 
 ```python
-     import sys
-     from termcolor import colored, cprint
+import sys
+from termcolor import colored, cprint
 
-     text = colored('Hello, World!', 'red', attrs=['reverse', 'blink'])
-     print(text)
-     cprint('Hello, World!', 'green', 'on_red')
+text = colored('Hello, World!', 'red', attrs=['reverse', 'blink'])
+print(text)
+cprint('Hello, World!', 'green', 'on_red')
 
-     print_red_on_cyan = lambda x: cprint(x, 'red', 'on_cyan')
-     print_red_on_cyan('Hello, World!')
-     print_red_on_cyan('Hello, Universe!')
+print_red_on_cyan = lambda x: cprint(x, 'red', 'on_cyan')
+print_red_on_cyan('Hello, World!')
+print_red_on_cyan('Hello, Universe!')
 
-     for i in range(10):
-         cprint(i, 'magenta', end=' ')
+for i in range(10):
+    cprint(i, 'magenta', end=' ')
 
-     cprint("Attention!", 'red', attrs=['bold'], file=sys.stderr)
+
+cprint("Attention!", 'red', attrs=['bold'], file=sys.stderr)
 ```
 
-### Disabling
+
+## Disabling
 Any value in the environment variable `ANSI_COLORS_DISABLED` will disable colors.
 
-### Text Properties
+
+## Text Properties
 Text colors:
 
 > -   grey
@@ -48,7 +54,7 @@ Text highlights:
 > -   on\_cyan
 > -   on\_white
 
-> Attributes:
+Attributes:
 > -   bold
 > -   dark
 > -   underline
@@ -56,7 +62,8 @@ Text highlights:
 > -   reverse
 > -   concealed
 
-### Terminal properties
+
+## Terminal properties
 
     Terminal       bold      dark   underline   blink        reverse   concealed
     -------------- --------- ------ ----------- ------------ --------- -----------
@@ -71,11 +78,13 @@ Text highlights:
     Cygwin SSH     yes       no     color       color        color     yes
     Mac Terminal   yes       no     yes         yes          yes       yes
 
-### License and Authorship
+
+## License and Authorship
 Original author: Konstantin Lepa <konstantin.lepa@gmail.com>, Copyright (c) 2008-2011 Volvox Development Team
 Original license: MIT.
 
 Original source code repository no longer available, this is a fork of the artifacts published to pypi
+
 
 ## Documents
 - [Changes](https://github.com/matthewdeanmartin/termcolor/blob/main/docs/CHANGES.MD)
