@@ -14,4 +14,4 @@ pytest-cov = ">=2.10.1"
 check-wheel-contents = "*"
 
 [requires]
-python_version = "3.9"
+python_version = "3.11"
