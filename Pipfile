@@ -4,9 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pytest-cov = "*"
 
 [dev-packages]
+tox = "*"
 pytest = "*"
 flake8 = "*"
 pylint = "*"

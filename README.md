@@ -1,8 +1,8 @@
 # termcolor-whl
-
 Colorize your console output.
 
-This is the successor to [`termcolor`](https://pypi.org/project/termcolor/).
+This is a fork of `termcolor`, originally created so it would have a wheel package.
+
  
 Note that handling of nested colour tokens has been removed in this package. This is to save on an import of a large package (`re`) and since this is actually not a common usage case.
 
@@ -22,6 +22,7 @@ print_red_on_cyan('Hello, Universe!')
 
 for i in range(10):
     cprint(i, 'magenta', end=' ')
+
 
 cprint("Attention!", 'red', attrs=['bold'], file=sys.stderr)
 ```

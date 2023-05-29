@@ -1,9 +1,13 @@
+"""Demo code"""
 import os
 
 from . import cprint
 
 
+
 def demo():
+    """Show possible usages"""
+    # pylint: disable=consider-using-f-string
     print("Current terminal type: %s" % os.getenv("TERM"))
     print("Test basic colors:")
     cprint("Grey color", "grey")
