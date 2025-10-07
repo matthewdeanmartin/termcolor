@@ -12,7 +12,16 @@ ATTRIBUTE_NAMES = ["bold", "dark", "", "underline", "blink", "", "reverse", "con
 ATTRIBUTES = dict(zip(ATTRIBUTE_NAMES, range(1, 9)))
 del ATTRIBUTES[""]
 
-HIGHLIGHT_NAMES = ["on_grey", "on_red", "on_green", "on_yellow", "on_blue", "on_magenta", "on_cyan", "on_white"]
+HIGHLIGHT_NAMES = [
+    "on_grey",
+    "on_red",
+    "on_green",
+    "on_yellow",
+    "on_blue",
+    "on_magenta",
+    "on_cyan",
+    "on_white",
+]
 HIGHLIGHTS = dict(zip(HIGHLIGHT_NAMES, range(40, 48)))
 
 COLOR_NAMES = ["grey", "red", "green", "yellow", "blue", "magenta", "cyan", "white"]
@@ -41,7 +50,7 @@ def colored(text, color=None, on_color=None, attrs=None):
     '\\x1b[32mHello, World!\\x1b[0m'
     """
     if not os.getenv("ANSI_COLORS_DISABLED") and (color or on_color or attrs):
-        fmt_str = '\033[%dm%s'
+        fmt_str = "\033[%dm%s"
         if color:
             text = fmt_str % (COLORS[color], text)
         if on_color:

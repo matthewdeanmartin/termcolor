@@ -20,15 +20,14 @@ def test_exercise_code():
     cprint("Attention!", "red", attrs=["bold"], file=sys.stderr)
 
 
-
 def test_examples():
-    colored('Hello, World!', 'red', 'on_grey', ['bold', 'blink'])
-    colored('Hello, World!', 'green')
+    colored("Hello, World!", "red", "on_grey", ["bold", "blink"])
+    colored("Hello, World!", "green")
 
 
 def test_spurious_reset():
-    hello = 'Hello, World!'
-    out = colored('Hello, World!')
+    hello = "Hello, World!"
+    out = colored("Hello, World!")
     assert out == hello
 
 
