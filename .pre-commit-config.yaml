@@ -18,15 +18,15 @@ repos:
                 args: [ --remove ]
             -   id: forbid-new-submodules
     -   repo: https://github.com/abravalheri/validate-pyproject
-        rev: v0.24.1
+        rev: v0.25
         hooks:
             -   id: validate-pyproject
     -   repo: https://github.com/psf/black-pre-commit-mirror
-        rev: 25.11.0
+        rev: 26.5.1
         hooks:
             -   id: black
     -   repo: https://github.com/astral-sh/ruff-pre-commit
-        rev: v0.14.6
+        rev: v0.15.14
         hooks:
             -   id: ruff
                 exclude: ^dead_code/
