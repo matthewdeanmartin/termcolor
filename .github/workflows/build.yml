@@ -26,7 +26,7 @@ jobs:
       - name: Install global dependencies
         run: |
           pipx install isort && pipx install black && pipx install bandit && pipx install pylint && \
-          pipx install pre-commit && pipx install poetry
+          pipx install poetry
       - name: Run make
         run: pipenv run make publish
       - name: Upload Package
