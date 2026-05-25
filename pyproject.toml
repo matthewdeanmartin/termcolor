@@ -60,6 +60,8 @@ pytest = "==6.0.1"
 
 
 [tool.uv]
+
+[tool.uv.pip]
 universal = true
 [build-system]
 requires = ["poetry>=0.12"]
