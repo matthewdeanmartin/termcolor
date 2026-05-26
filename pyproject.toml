@@ -53,11 +53,18 @@ python = ">=2.6 || >=3.0"
 [tool.poetry.dev-dependencies]
 tox = "*"
 flake8 = "*"
-pylint = "*"
+pylint = ">=3.0"
+mypy = ">=1.8"
 pytest-cov = ">=2.10.1"
 pytest = "==6.0.1"
 
 
+
+[dependency-groups]
+dev = [
+    "mypy>=1.8",
+    "pylint>=3.0",
+]
 
 [tool.uv]
 

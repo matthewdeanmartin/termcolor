@@ -1,4 +1,5 @@
 import sys
+
 from termcolor import colored, cprint
 from termcolor.__main__ import demo
 
