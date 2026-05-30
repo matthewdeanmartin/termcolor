@@ -88,3 +88,9 @@ Original source code repository no longer available, this is a fork of the artif
 
 ## Documents
 - [Changes](https://github.com/matthewdeanmartin/termcolor/blob/main/docs/CHANGES.MD)
+
+## Project Links
+
+- [GitHub](https://github.com/matthewdeanmartin/termcolor)
+- [PyPI](https://pypi.org/project/termcolor-whl/)
+- [Bug Tracker](https://github.com/matthewdeanmartin/termcolor/issues)
