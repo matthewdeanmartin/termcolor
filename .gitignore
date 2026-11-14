@@ -131,3 +131,7 @@ dmypy.json
 .idea/
 
 .build_history/
+
+/landing/public/
+/landing/resources/
+/landing/.hugo_build.lock

@@ -1,0 +1,4 @@
+baseURL = 'https://matthewdeanmartin.github.io/termcolor/'
+locale = 'en-us'
+title = 'termcolor-whl — color for the command line'
+disableKinds = ['taxonomy', 'term', 'RSS']

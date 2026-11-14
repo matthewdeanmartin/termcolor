@@ -3,7 +3,7 @@ Colorize your console output.
 
 This is a fork of `termcolor`, originally created so it would have a wheel package.
 
- 
+
 Note that handling of nested colour tokens has been removed in this package. This is to save on an import of a large package (`re`) and since this is actually not a common usage case.
 
 ## Example
@@ -91,6 +91,8 @@ Original source code repository no longer available, this is a fork of the artif
 
 ## Project Links
 
+- [Homepage](https://matthewdeanmartin.github.io/termcolor/)
+- [Documentation source](https://github.com/matthewdeanmartin/termcolor/tree/main/docs)
 - [GitHub](https://github.com/matthewdeanmartin/termcolor)
 - [PyPI](https://pypi.org/project/termcolor-whl/)
 - [Bug Tracker](https://github.com/matthewdeanmartin/termcolor/issues)

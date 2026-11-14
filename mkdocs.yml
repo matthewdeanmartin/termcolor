@@ -1,0 +1,20 @@
+site_name: termcolor-whl
+site_url: https://termcolor-whl.readthedocs.io/en/latest/
+site_description: Colorize Python console output with ANSI text colors, highlights, and attributes.
+repo_url: https://github.com/matthewdeanmartin/termcolor
+edit_uri: edit/main/docs/
+theme:
+  name: readthedocs
+nav:
+  - Overview: index.md
+  - Installation: installation.md
+  - Usage: usage.md
+  - Changes: CHANGES.MD
+validation:
+  nav:
+    omitted_files: warn
+  links:
+    not_found: warn
+    unrecognized_links: warn
+plugins:
+  - search
